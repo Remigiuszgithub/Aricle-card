@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-grayish-blue);
+    font-size: 13px;
+}
+.main {
+    display: flex;
+    width: 70%;
+    align-items: stretch; 
+}
+.left {
+    border-radius: 15px 0 0 15px;
+    width: 90%;
+    display: flex;
+    align-items: stretch; 
+}
+.left img {
+    width: 100%;
+    border-radius: 15px 0 0 15px;
+}
+.right {
+    background-color: white;
+    transform: translateX(-13%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 15px 15px 0;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+.avatar {
+    display: flex;
+    align-items: center;
+}
+h1, h2 {
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+.right img {
+    border-radius: 50%;
+    width: 20%;
+}
+.info {
+    padding-top: 2rem;
+    width: 80%;
+}
+.footer {
+    padding-bottom: 1rem;
+    width: 80%;
+}
+.info h1 {
+    padding-bottom: 1rem;
+}
+.info p {
+    padding-bottom: 1.5rem;
+}
+p {
+    color: var(--grayish-blue);
+    font-weight: 500;
+    font-size: 1rem;
+}
+.avatar h2 {
+    font-size: 0.9rem;
+    padding-bottom: 0.3rem;
+}
+.avatar img {
+    padding-right: 0.7rem;
+}
+.btn {
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+}
+.btn img {
+    width: 50%;
+}
+.btn:active {
+    background-color:var(--very-dark-grayish-blue)
+}
+
+.share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon {
+    background-color: var(--very-dark-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+    transform: translateY(-150%);
+    width: 300px;
+    height: 60px;
+    text-transform: uppercase;
+    display: none;
+}
+.icon::after {
+    content: "";
+    position: absolute;
+    bottom: -13px; 
+    left: calc(50% -10px); 
+    border-width: 15px 15px 0; 
+    border-style: solid;
+    border-color: var(--very-dark-grayish-blue) transparent transparent; 
+}
+.icon img {
+    width: 8%;
+    height: auto;
+    margin-left: 0.8rem;
+}
+.icon button {
+    display: none;
+}
+.icon p {
+    letter-spacing: 0.3rem;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+@media (max-width: 900px) {
+    .left {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        width: 90%;
+    }
+    .right {
+        transform: translateX(0%);
+        border-radius: 0 0 15px 15px;
+        margin-bottom: 3rem;
+    }
+    .left {
+        margin-top: 10rem;
+    }
+    .left, .left img {
+        border-radius: 15px 15px 0 0;
+    }
+    .share {
+        position: absolute;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .icon {
+        transform: translateY(0%);
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        justify-content: space-around;
+        position: absolute;
+        min-height: 85px;
+    }
+    .icon::after {
+        display: none;
+    }
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0;
+        min-height: 85px;
+        width: 100%;
+    }
+    .icon p {
+        margin-left: 1rem;
+    }
+    .icon button {
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        background-color: var(--light-grayish-blue);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 4.5rem;
+        margin-right: 1.7rem;
+    }
+    .icon button img {
+        width: 45%;
+        margin-left: 0;
+    }
+    .avatar {
+        margin-left: 1.7rem;
+    }
+    #btn {
+        margin-right: 1.7rem;
+    }
+}
